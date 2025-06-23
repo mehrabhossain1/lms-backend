@@ -174,7 +174,7 @@ backend/
 | GET    | `/api/sales`      | `admin`, `manager` | Get all sales (role-based filtering) |
 | GET    | `/api/sales/dues` | `admin`, `manager` | Get all due (unpaid) sales           | -->
 
-## 🛡️ Middleware Usage
+<!-- ## 🛡️ Middleware Usage
 
 ✅ `verifyToken`
 Checks for a valid JWT in the request header.
@@ -182,8 +182,8 @@ Checks for a valid JWT in the request header.
 ✅ `authorizeRoles(...allowedRoles)`
 Restricts route access to users with specified roles.
 
-🔁 Sales are linked to `product` and `soldBy` using Mongoose `.populate()`  
-📉 Product stock is automatically reduced on each sale  
+🔁 Sales are linked to `product` and `soldBy` using Mongoose `.populate()`
+📉 Product stock is automatically reduced on each sale
 🧾 Dues are calculated by `total - paid`
 
 ## 📦 Example Request (using token)
@@ -193,7 +193,7 @@ GET /admin
 Authorization: Bearer <your_token>
 ```
 
-📌 Example: `authorizeRoles("admin")` protects routes only for admin users.
+📌 Example: `authorizeRoles("admin")` protects routes only for admin users. -->
 
 ## 📄 License
 
