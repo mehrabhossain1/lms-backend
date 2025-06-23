@@ -5,7 +5,7 @@ An online education platform built with **Node.js, Express, and MongoDB** (MERN 
 ## 🚀 Live Links
 
 -   🔗 Frontend: [Coming soon]
--   🔗 Backend API: [Coming soon]
+-   🔗 Backend API: https://lms-backend-5lk5.onrender.com
 
 ---
 
