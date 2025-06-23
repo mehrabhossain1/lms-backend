@@ -71,7 +71,33 @@ An online education platform built with **Node.js, Express, and MongoDB** (MERN 
 
 ## 📁 Project Structure
 
-## 🚀 Installation
+```bash
+backend/
+├── controllers/
+│   ├── authController.js ✅
+│   ├── courseController.js 🆕
+│   ├── reviewController.js 🆕
+│   └── userController.js
+├── models/
+│   ├── User.js ✅
+│   ├── Course.js 🆕
+│   ├── Review.js 🆕
+│   └── Enrollment.js
+├── routes/
+│   ├── authRoutes.js ✅
+│   ├── courseRoutes.js 🆕
+│   ├── reviewRoutes.js 🆕
+│   └── userRoutes.js
+├── middlewares/
+│   ├── authMiddleware.js ✅
+│   ├── roleMiddleware.js ✅
+├── utils/
+│   └── errorHandler.js ✅
+├── server.js ✅
+└── .env ✅
+```
+
+<!-- ## 🚀 Installation
 
 ```bash
 git clone https://github.com/mehrabhossain1/stock-sales-management-backend
@@ -121,9 +147,7 @@ backend/
 │   └── errorHandler.js ✅
 ├── server.js ✅
 └── .env ✅
-
-
-```
+``` -->
 
 <!-- ## 🔄 API Endpoints
 
