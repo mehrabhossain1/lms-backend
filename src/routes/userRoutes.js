@@ -2,32 +2,40 @@ const express = require("express");
 
 const verifyToken = require("../middlewares/authMiddleware");
 const authorizeRoles = require("../middlewares/roleMiddleware");
+const { getEnrolledCourses } = require("../controllers/userController");
 
 const router = express.Router();
 
-// Admin routes
-router.get("/admin", verifyToken, authorizeRoles("admin"), (req, res) => {
-    res.status(200).json({ message: "Admin route accessed" });
-});
+// // Admin routes
+// router.get("/admin", verifyToken, authorizeRoles("admin"), (req, res) => {
+//     res.status(200).json({ message: "Admin route accessed" });
+// });
 
-// Manager routes
-router.get(
-    "/manager",
-    verifyToken,
-    authorizeRoles("admin", "manager"),
-    (req, res) => {
-        res.status(200).json({ message: "Manager route accessed" });
-    }
-);
+// // Manager routes
+// router.get(
+//     "/manager",
+//     verifyToken,
+//     authorizeRoles("admin", "manager"),
+//     (req, res) => {
+//         res.status(200).json({ message: "Manager route accessed" });
+//     }
+// );
 
-// User routes
+// // User routes
+// router.get(
+//     "/user",
+//     verifyToken,
+//     authorizeRoles("admin", "manager", "user"),
+//     (req, res) => {
+//         res.status(200).json({ message: "User route accessed" });
+//     }
+// );
+
 router.get(
-    "/user",
+    "/enrolled",
     verifyToken,
-    authorizeRoles("admin", "manager", "user"),
-    (req, res) => {
-        res.status(200).json({ message: "User route accessed" });
-    }
+    authorizeRoles("student"),
+    getEnrolledCourses
 );
 
 module.exports = router;

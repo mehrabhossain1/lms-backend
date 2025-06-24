@@ -1,4 +1,3 @@
-// models/User.js
 const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema(
@@ -6,11 +5,12 @@ const userSchema = new mongoose.Schema(
         name: String,
         email: { type: String, unique: true },
         password: String,
-        role: {
-            type: String,
-            enum: ["admin", "student"],
-            default: "student",
-        },
+        role: { type: String, enum: ["admin", "student"], default: "student" },
+
+        // Add this:
+        enrolledCourses: [
+            { type: mongoose.Schema.Types.ObjectId, ref: "Course" },
+        ],
     },
     { timestamps: true }
 );
