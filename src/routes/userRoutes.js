@@ -2,7 +2,10 @@ const express = require("express");
 
 const verifyToken = require("../middlewares/authMiddleware");
 const authorizeRoles = require("../middlewares/roleMiddleware");
-const { getEnrolledCourses } = require("../controllers/userController");
+const {
+    getEnrolledCourses,
+    enrollInCourse,
+} = require("../controllers/userController");
 
 const router = express.Router();
 
@@ -37,6 +40,8 @@ router.get(
     authorizeRoles("student"),
     getEnrolledCourses
 );
+
+router.post("/enroll/:courseId", verifyToken, enrollInCourse);
 
 module.exports = router;
 // This file defines the user routes for different roles

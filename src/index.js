@@ -8,6 +8,7 @@ const authRoutes = require("./routes/authRoutes");
 const userRoutes = require("./routes/userRoutes");
 const courseRoutes = require("./routes/courseRoutes");
 const reviewRoutes = require("./routes/reviewRoutes");
+const adminRoutes = require("./routes/adminRoutes");
 
 // Ping route
 const pingRoute = require("./routes/ping");
@@ -29,6 +30,7 @@ app.use("/api/users", userRoutes);
 // app.use("/api/sales", saleRoutes);
 app.use("/api/courses", courseRoutes);
 app.use("/api/reviews", reviewRoutes);
+app.use("/api/admin", adminRoutes);
 
 // start the server
 const PORT = process.env.PORT || 7002;
